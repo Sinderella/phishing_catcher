@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: monitor-config
+data:
+  external.yaml: |
+    override_suspicious.yaml: true
+
+    keywords:
+      '-line.': 70
+
+    tlds:
+      'cc':

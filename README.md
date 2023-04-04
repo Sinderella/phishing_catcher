@@ -1,5 +1,13 @@
 # Phishing Catcher
 
+Note: Forked from https://github.com/x0rz/phishing_catcher
+
+## Changes
+
+- change `tqdm` to `loguru` for better logging in contianers
+- update `Dockerfile` and switch to `poetry`
+- add `deploy` directory for kubernetes deployment
+
 Catch possible phishing domains in near real time by looking for suspicious TLS certificate issuances reported to the [Certificate Transparency Log (CTL)](https://www.certificate-transparency.org/) via the [CertStream](https://certstream.calidog.io/) API. "Suspicious" issuances are those whose domain name scores beyond a certain threshold based on a configuration file.
 
 This is just a working PoC. Feel free to contribute and tweak the code to fit your needs. 👍

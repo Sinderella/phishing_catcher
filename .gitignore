@@ -1,2 +1,3 @@
 *.pyc
-suspicious_domains.log
+.idea
+logs

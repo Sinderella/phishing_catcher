@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: monitor
+  name: monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitor
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: monitor
+    spec:
+      containers:
+        - image: ghcr.io/sinderella/phishing_catcher:main
+          name: monitor
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: monitor-config
+              mountPath: /app/external.yaml
+              subPath: external.yaml
+              readOnly: true
+
+      imagePullSecrets:
+        - name: regcred
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - name: monitor-config
+          configMap:
+            name: monitor-config
+status: { }

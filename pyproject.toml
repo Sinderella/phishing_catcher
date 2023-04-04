@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "phishing-catcher"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "phishing_catcher"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+certstream = "^1.12"
+pyyaml = "^6.0"
+tld = "^0.13"
+levenshtein = "^0.20.9"
+loguru = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
