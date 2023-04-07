@@ -115,7 +115,7 @@ def callback(message, context):
 
         for domain in all_domains:
             domain = domain.lower()
-            if not domain.endswith(".cc") and len(domain) > suspicious["domain_max_length"]:
+            if not domain.endswith(".cc") or len(domain) > suspicious["domain_max_length"]:
                 continue
 
             score = score_domain(domain.lower())
