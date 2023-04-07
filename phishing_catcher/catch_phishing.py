@@ -114,7 +114,8 @@ def callback(message, context):
         all_domains: List[str] = message["data"]["leaf_cert"]["all_domains"]
 
         for domain in all_domains:
-            if not domain.lower().endswith(".cc"):
+            domain = domain.lower()
+            if not domain.endswith(".cc") and len(domain) > suspicious["domain_max_length"]:
                 continue
 
             score = score_domain(domain.lower())
