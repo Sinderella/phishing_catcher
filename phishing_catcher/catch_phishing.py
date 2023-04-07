@@ -29,7 +29,7 @@ from confusables import unconfuse
 certstream_url = "wss://certstream.calidog.io"
 
 log_suspicious = Path(
-    os.path.dirname(os.path.realpath(__file__))) / "logs" / "suspicious_domains_" / f"{time.strftime('%Y-%m-%d')}.log"
+    os.path.dirname(os.path.realpath(__file__))) / "../logs" / f"suspicious_domains_{time.strftime('%Y-%m-%d')}.log"
 
 suspicious_yaml = Path(os.path.dirname(os.path.realpath(__file__))) / "../suspicious.yaml"
 
