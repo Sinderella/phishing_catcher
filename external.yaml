@@ -1,6 +1,7 @@
 # Change to true if you want to override suspicious.yaml
 # and only use your own config in this file.
 override_suspicious.yaml: false
+domain_max_length: 10
 
 keywords:
 # Add your own keywords here or override the score

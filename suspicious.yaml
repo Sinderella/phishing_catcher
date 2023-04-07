@@ -1,3 +1,4 @@
+domain_max_length: 10
 keywords:
 # Generic suspicious
     'login': 25
